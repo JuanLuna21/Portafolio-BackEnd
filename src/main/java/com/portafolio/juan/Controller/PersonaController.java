@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://proyectojuan-e80d5.web.app")
 @RestController
 
 
