@@ -71,7 +71,7 @@ public class CExperiencia {
         return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
     }
     
-    @GetMapping("/detail/{id}")
+    @GetMapping("/details/{id}")
     public ResponseEntity<Experiencia> getById(@PathVariable("id") int id){
         
         if(!sExperiencia.existById(id))
