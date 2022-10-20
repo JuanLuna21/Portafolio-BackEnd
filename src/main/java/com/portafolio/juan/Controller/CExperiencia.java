@@ -80,7 +80,7 @@ public class CExperiencia {
     }
     
     
-    public ResponseEntity<?>delte(@PathVariable("id") int id){
+    public ResponseEntity<?>delete(@PathVariable("id") int id){
     
     if(!sExperiencia.existById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"),HttpStatus.BAD_REQUEST);
