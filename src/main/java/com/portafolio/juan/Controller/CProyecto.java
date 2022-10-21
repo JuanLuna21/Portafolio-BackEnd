@@ -47,12 +47,12 @@ public class CProyecto {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         
         if(sProyecto.existsByNombreP(dtoproyecto.getNombreP()))
-                return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
+                return new ResponseEntity(new Mensaje("Ese Proyecto existe"), HttpStatus.BAD_REQUEST);
             
             Proyecto proyecto = new Proyecto(dtoproyecto.getNombreP(), dtoproyecto.getDescripcionP(), dtoproyecto.getImgP());
             sProyecto.save(proyecto);
             
-            return new ResponseEntity(new Mensaje("Experiencia agregada"),HttpStatus.OK);
+            return new ResponseEntity(new Mensaje("Proyecto agregado"),HttpStatus.OK);
     }
     
     
