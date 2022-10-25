@@ -49,12 +49,12 @@ public class CHys {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         
         if(sHys.existsByNombreH(dtohys.getNombreH()))
-                return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
+                return new ResponseEntity(new Mensaje("Esa tecnologia existe"), HttpStatus.BAD_REQUEST);
             
             Hys hys = new Hys(dtohys.getNombreH(), dtohys.getDescripcionH(), dtohys.getPorcentajeH());
             sHys.save(hys);
             
-            return new ResponseEntity(new Mensaje("Experiencia agregada"),HttpStatus.OK);
+            return new ResponseEntity(new Mensaje("tecnologia agregada"),HttpStatus.OK);
     }
     
      @PreAuthorize("hasRole('ADMIN')")
