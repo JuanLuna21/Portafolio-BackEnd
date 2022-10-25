@@ -39,7 +39,7 @@ public class CProyecto {
         
     }
     
-       @PreAuthorize("hasRole('ADMIN')")
+      
         @PostMapping("/create")
     public ResponseEntity<?>create(@RequestBody dtoProyecto dtoproyecto){
     
@@ -57,7 +57,7 @@ public class CProyecto {
     
     
     
-     @PreAuthorize("hasRole('ADMIN')")
+    
      @PutMapping("/update/{id}")
     public ResponseEntity<?>update(@PathVariable("id") int id, @RequestBody dtoProyecto dtoproyecto){
         
@@ -87,7 +87,7 @@ public class CProyecto {
         return new ResponseEntity(proyecto, HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?>delete(@PathVariable("id") int id){
     

@@ -41,7 +41,7 @@ public class CHys {
         
     }
     
-        @PreAuthorize("hasRole('ADMIN')")
+     
         @PostMapping("/create")
     public ResponseEntity<?>create(@RequestBody dtoHys dtohys){
     
@@ -57,7 +57,7 @@ public class CHys {
             return new ResponseEntity(new Mensaje("tecnologia agregada"),HttpStatus.OK);
     }
     
-     @PreAuthorize("hasRole('ADMIN')")
+    
      @PutMapping("/update/{id}")
     public ResponseEntity<?>update(@PathVariable("id") int id, @RequestBody dtoHys dtohys){
         
@@ -88,7 +88,7 @@ public class CHys {
         return new ResponseEntity(hys, HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?>delete(@PathVariable("id") int id){
     
