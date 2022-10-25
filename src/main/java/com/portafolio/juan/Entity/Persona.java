@@ -32,6 +32,5 @@ public class Persona  {
     @Size(min=1,max=600, message = "no me cumple la condicion")
     private String hobbie;
     @NotNull
-    @Size(min=1,max=6000, message = "no me cumple la condicion")
     private String img;
 }
