@@ -22,8 +22,6 @@ public class Seducacion {
     return rEducacion.findAll();
             }
     
-    
-    
     public Optional<Educacion> getOne(int id){
             return rEducacion.findById(id);
          }
